@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+	<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">	
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>iDress4weather</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link href="css/grayscale.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+    <link href="https://necolas.github.io/normalize.css/4.1.1/normalize.css" rel="stylesheet" />
+
+    <!--link href="css/main.css" rel="stylesheet" /-->
+
+    <script
+        src="https://code.jquery.com/jquery-3.1.1.js"
+        integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+        crossorigin="anonymous">
+    </script>
+
+    <!--script src="js/main.js"></script-->
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="node_modules/instafeed.js/instafeed.min.js"></script>
+	
+
+	
+	
+
+
+      	
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+   <script src="js/index_morning.js"></script>
+   <script type="text/javascript" src="libs/instafeed/instafeed.min.js"></script>    
+   <script type="text/javascript"></script>
+	<!--script src="popup.html"></script-->
+<!--link rel="stylesheet" href="css/style.css" NETU-->
+<!--style>
+#p{
+margin-top: 0 important;
+}
+
+#modal-container {
+position: fixed important;
+background: #fff important;
+width: 70% important;
+max-width: 400px important;
+border: 1px solid #000 important;
+left: 50% important;
+padding: 20px important;
+border-radius: 5px important;
+
+
+-webkit-transform: translate(-50%,-200%) important;
+-ms-transform: translate(-50%,-200%) important;
+transform: translate(-50%,-200%) important; 
+
+transition: transform 200ms ease-out important;
+transition: transform 200ms ease-out important;
+}
+
+#modal-container: before {
+content: "" important;
+position: fixed important;
+display: none important;
+background-color: rgba(0,0,0,.8) important;
+top: 0 important;
+left: 0 important;
+height: 100% important;
+width: 100% important;
+}
+#modal: target: before {
+display: block important;
+}
+
+#modal: target #modal-container {
+	top: 20%
+-webkit-transform: translate(-50%,0%) important;
+-ms-transform: translate(-50%,0%) important;
+transform: translate(-50%,0%) important;
+}
+#modal-close{
+	
+	}
+	#pop {}	
+	</style-->
+
+
+
+
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+		  
+                <a class="navbar-brand page-scroll" href="#page-top">
+                     
+        <!--i class="fa fa-play-circle"></i--><span class="feelslike_c"  style = 'cursor: pointer;' title="Click to feelslike ºF"></span><span class="feelslike_f"  style = 'cursor: pointer;' title="Click to feelslike ºC"></span>
+                <span><img class="icon" title="Have a nice day!"><span class="wind_dir" style="margin: 8px !Important;" title="Wind direction"></span></span><span class="wind_kph" style = 'cursor: pointer;' title="Click to miles per hour"></span><span class="wind_mph"  style = 'cursor: pointer;' title="Click to mitres/second"></span></a>
+		   
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+			 <li>
+                        <a class="page-scroll" href="#weather">Weather</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="https://idress4weather.github.io/#instruction">Instruction</a>
+                    </li>			
+                    <li>
+                        <a class="page-scroll" href="https://idress4weather.github.io/#iwishit">I wish it</a>
+                    </li>
+                  		  
+
+		    
+		    <li>
+                        <a class="page-scroll" href="https://idress4weather.github.io/#contact">Contact</a>
+                    </li>
+                                <li>
+                        <a class="page-scroll" href="https://idress4weather.github.io/#newapps">New apps</a>
+                    </li>	
+		    <li>
+                        <a class="page-scroll" href="https://idress4weather.github.io/#map">Map</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+			<div class="column column-1"> 
+	
+				
+				
+				
+				
+                        <!--h1 class="brand-heading"><a href="#news">New Apps Coming Soon</a></h1-->
+			 	
+                        <p class="intro-text" style="margin-top: 50px; font-family: 'Quicksand', sans-serif; margin-right: 8px;">____________________________</p>
+           
+ <br><h2>Forecast is comming soon</h2></p>
+<script>
+ window.onload= function() {
+    document.getElementById('toggler').onclick = function() {
+        openbox('box', this);
+        return false;
+    };
+};
+function openbox(id, toggler) {
+    var div = document.getElementById(id);
+    if(div.style.display == 'block') {
+        div.style.display = 'none';
+        toggler.innerHTML = 'Open instuction';
+    }
+    else {
+        div.style.display = 'block';
+        toggler.innerHTML = 'Close';
+    }
+}
+</script>
+            
+
+  
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+			<p  style = 'cursor: pointer; margin-top: 3px !Important;'><h1><a id="toggler"  
+				 href="#" title="Click what to do">Contact
+                        IF YOU WISH THE SAME APP</a></h1><p>
+                   
+		    <hr>
+<div id="box" style="display: none;">
+
+<h5><p>1. Create 
+<br>new Instagram account 
+<br>WITH
+<br>new Instagram login 
+<br>WITH 
+<br>temporary password 12345admin 
+
+<br>2. Send
+<br> your new Instagram Login 
+<br>TO  
+<br>us
+    
+<br>3. Add & Mark
+<br>your Instagram photo 
+<br>WITH 
+<br>current weather #25 #26 #27
+							 
+<br>4. Tomorrow 
+<br>you will start with us
+</p></h5>
+	</div>
+		   </div>
+            </div>
+
+			     <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+	<!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>		
+
+                  
+                    <p></p>
+                    <form role="form">
+                        <div class="row">
+                            <div class="form-group col-lg-4">
+                                <label>New Instagram Name</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label>Email Address</label>
+                                <input type="email" class="form-control">
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label>Phone Number</label>
+                                <input type="tel" class="form-control">
+                            </div>
+                            <div class="clearfix"></div>
+                            <!--div class="form-group col-lg-12">
+                                <label>Message</label>
+                                <textarea class="form-control" rows="6"></textarea>
+                            </div-->
+                            <div class="form-group col-lg-12">
+                                <input type="hidden" name="save" value="contact">
+                                <button type="submit" class="btn btn-default">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+               
+    <!-- /.container -->
+<style>
+#instafeed a {
+  padding:5px 5px 1px 5px;
+  margin:10px;
+  border:1px solid #e1e1e1;
+  display:inline-block;
+  border-radius: 4px;
+  position:relative;
+}
+	#instafeed .likes {
+  background:rgba(10,100,105,0.8);
+  font-family:sans-serif;
+  font-size:1em;
+  position:absolute;
+  color:#fff;
+  right:5px;
+  top:5px;
+  left:5px;
+  opacity:0;
+  text-align:center;
+  line-height:150px;
+  text-shadow:0 1px rgba(0,0,0,0.5);
+  -webkit-font-smoothing:antialiased;
+  -webkit-transition: opacity 100ms ease;
+    -moz-transition: opacity 100ms ease;
+    -o-transition: opacity 100ms ease;
+    -ms-transition: opacity 100ms ease;
+    transition: opacity 100ms ease;
+}
+#instafeed a:hover .likes {
+  opacity:1;
+}
+</style>
+<marquee behavior="scroll" scrollAmount="5" direction="up" position="inherit"  width="auto" height="150" onMouseOver="this.scrollAmount=0" onMouseOut="this.scrollAmount=3">
+   <div class='beg_stroka' align="middle" > 
+  				
+<div id="instafeed">
+	<a href="https://www.instagram.com/idress4weather/" id="next-button" title="Add New INSTA #25">!</a></div>
+	</div>
+	
+</div>
+</marquee>
+<div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                  
+                    <h1 class="intro-text text-center" >		
+			    <hr id="weather" style="margin-top: 30px;"></div></div> </div> 
+          <h1 class="intro-text text-center" style="margin-top: 35px;" ><a href="https://idress4weather.github.io/#weather">CURRENT WEATHER</a></h1>    
+	
+<p  class="intro-text text-center" style="margin-top: 2px; font-family: 'Quicksand', sans-serif; margin-right: 8px;">____________________________</p>
+
+ <br><h2>Forecast Weather</a></h2></p>		
+<marquee behavior="scroll" scrollAmount="5" direction="up" position="inherit"  width="auto" height="250" onMouseOver="this.scrollAmount=0" onMouseOut="this.scrollAmount=3">
+   <div class='beg_stroka' align="middle" >	
+
+
+			<!--a href="#weather" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a-->
+<!--div class="container" style="margin-bottom: 100px"-->	
+    <!--div class="row text-center"-->
+      <img src="https://media.giphy.com/media/xUPGck3phxwOSkm3f2/giphy.gif" id="loader">
+      <!--div class="border col-sm-offset-4 col-sm-4 col-xs-offset-1 col-xs-10"-->
+	              
+                 
+               <p class="location" title="The best city of the world!"></p>
+        <p class="temp_c"  style = 'cursor: pointer;' title="Click to ºF"></p> 
+        <p class="temp_f"  style = 'cursor: pointer;' title="Click to ºC"></p>
+
+	<p><span class="wind_dir" title="Wind dirrection"></span><span  class="wind_kph" style = 'cursor: pointer;' title="Click to miles per hour"></span><span class="wind_mph" style = 'cursor: pointer;' title="Click to mitres per sececond"></span></p>	
+  
+	<p class="text"></p>
+        <img class="icon" title="Have a nice day">
+	<p class="feelslike_c"  style = 'cursor: pointer;' title="Click to ºF"></p> 
+        <p class="feelslike_f"  style = 'cursor: pointer;' title="Click to ºC"></p>
+		   
+ </div>
+</marquee>
+	<!--/div>
+    </div>
+  </div-->
+
+		
+
+			    
+				<!--a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header><!--style="position: relative; min-width: 320px; font-size: 16px; font-family: 'RobotoRegular', sans-serif;"-->
+	
+
+
+
+<!--#map-->	
+	<!--a href="#map" class="btn btn-circle page-scroll">
+        <i class="fa fa-angle-double-down animated"></i>
+        </a-->
+   
+		
+		<!-- Map Section -->
+    <!--div id="map"></div-->
+		 
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; iDress4weather.github.io &copy; 2017</p>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <!-- Google Maps API Key - Use your own API key= AIzaSyCx713Z6MzLSQe5QSC2mtrRE0XIxb1LRns to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+    <!-- Theme JavaScript -->
+    <script src="js/grayscale.min.js"></script>
+	
+
+</body>
+
+</html>
