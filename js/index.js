@@ -44,12 +44,12 @@ $(function() {
 			var longitude = location.lng;
 			var weatherUrl = 'https://api.apixu.com/v1/current.json?key=c696097710604a5c8a4154155170607&q=' + latitude + ',' + longitude;
       getWeatherInfo(weatherUrl); //this function sends ajax request to weather API
-			// Google Maps Scripts
+			// Google Maps Scripts 49.585008400407155, 34.46196020000002
 var map = null;
 // When the window has finished loading create our google map below
 google.maps.event.addDomListener(window, 'load', init);
 google.maps.event.addDomListener(window, 'resize', function() {
-    map.setCenter(new google.maps.LatLng(49.585008400407155, 34.46196020000002));
+    map.setCenter(new google.maps.LatLng(parseInt(locations.lat), parseInt(locations.lng)));
 });
 
 function init() {
@@ -60,7 +60,7 @@ function init() {
         zoom: 15,
 
         // The latitude and longitude to center the map (always required)
-        center: new google.maps.LatLng(49.585008400407155, 34.46196020000002) // New York 40.6700, -73.9400
+        center: new google.maps.LatLng(parseInt(locations.lat), parseInt(locations.lng)) // New York 40.6700, -73.9400
 
         // Disables the default Google Maps UI components
         disableDefaultUI: true,
@@ -185,13 +185,13 @@ function init() {
 
     // Create the Google Map using out element and options defined above
     map = new google.maps.Map(mapElement, mapOptions);
-    var lat = parseInt(location.lat);
-	var lng = parseInt(location.lng);
+    /*var lat = parseInt(location.lat);
+	var lng = parseInt(location.lng);*/
 	  
 		  
     // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
     var image = 'img/map-marker.png';
-    var myLatLng = new google.maps.LatLng(lat, lng);
+    var myLatLng = new google.maps.LatLng(parseInt(locations.lat), parseInt(locations.lng));
     var beachMarker = new google.maps.Marker({
         position: myLatLng,
         map: map,
