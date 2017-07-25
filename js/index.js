@@ -45,7 +45,7 @@ $(function() {
 			var weatherUrl = 'https://api.apixu.com/v1/current.json?key=c696097710604a5c8a4154155170607&q=' + latitude + ',' + longitude;
       getWeatherInfo(weatherUrl); //this function sends ajax request to weather API
 			// Google Maps Scripts 49.585008400407155, 34.46196020000002
-var map = null;
+var map = null;/*
 // When the window has finished loading create our google map below
 google.maps.event.addDomListener(window, 'load', init);
 google.maps.event.addDomListener(window, 'resize', function() {
@@ -185,8 +185,8 @@ function init() {
 
     // Create the Google Map using out element and options defined above
     map = new google.maps.Map(mapElement, mapOptions);
-    /*var lat = parseInt(location.lat);
-	var lng = parseInt(location.lng);*/
+    //var lat = parseInt(location.lat);
+	//var lng = parseInt(location.lng);
 	  
 		  
     // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
@@ -197,7 +197,7 @@ function init() {
         map: map,
         icon: image
     });
-}
+}*/
 			
 		}
     }).fail(function() {
