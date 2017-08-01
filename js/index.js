@@ -76,7 +76,7 @@ ball.ondragstart = function() {
 			var latitude = location.lat;
 			var longitude = location.lng;
 				
- var map;
+/* var map;
 var geoJSON;
   var request;
   var gettingData = false;
@@ -85,7 +85,8 @@ var geoJSON;
   function initialize() {
     var mapOptions = {
       zoom: 4,
-      center: new google.maps.LatLng(location.lat, location.lng)/*AIzaSyCB7eXQgDDLJM1Ih386aUUlfMRt9n_oV0w*/
+      center: new google.maps.LatLng(location.lat, location.lng)
+     
     };
 
     map = new google.maps.Map(document.getElementById('map-canvas'),
@@ -219,6 +220,7 @@ var geoJSON;
   };
 
   google.maps.event.addDomListener(window, 'load', initialize);
+*/
 
   /********************************************************************************/
  //создаем инфоокно http://mycode.in.ua/js/google-maps/simple-gmap.html
