@@ -75,19 +75,9 @@ ball.ondragstart = function() {
       var location = response.location;
 			var latitude = location.lat;
 			var longitude = location.lng;
-			var weatherUrl = 'https://api.apixu.com/v1/current.json?key=c696097710604a5c8a4154155170607&q=' + latitude + ',' + longitude;
-      getWeatherInfo(weatherUrl);//this function sends ajax request to weather API
-	getForecastInfo(url, location.lat, location.lng);
-			
-		}
-    }).fail(function() {
-      $('.border').append('<p>Error: Could not load weather data!</p>');
-    });
- 
- /***************************************************************************************************************/
-function getForecastInfo(url,location.lat,location.lng) {	
+				
  var map;
-			 var geoJSON;
+var geoJSON;
   var request;
   var gettingData = false;
   var openWeatherMapKey = "4b21fe0c4323ae251a754750e6cb5638"
@@ -232,7 +222,7 @@ function getForecastInfo(url,location.lat,location.lng) {
 
   /********************************************************************************/
  //создаем инфоокно http://mycode.in.ua/js/google-maps/simple-gmap.html
-var infowindow = new google.maps.InfoWindow({ 
+/*var infowindow = new google.maps.InfoWindow({ 
   content: '<div class="content">Какой-то контент</div>'
 });
 //открываем инфоокно по клику на маркер
@@ -246,7 +236,18 @@ google.maps.event.addListener(map, 'click', function(event){
     currentInfoWindow.close();
   }
 }	  
-  }
+  
+			var weatherUrl = 'https://api.apixu.com/v1/current.json?key=c696097710604a5c8a4154155170607&q=' + latitude + ',' + longitude;
+      getWeatherInfo(weatherUrl);//this function sends ajax request to weather API
+	
+			
+		}
+    }).fail(function() {
+      $('.border').append('<p>Error: Could not load weather data!</p>');
+    });
+ 
+ /***************************************************************************************************************/
+
 	/**************************************************************************************************************************************************/
   // code for ajax request to weather API
   function getWeatherInfo(weatherUrl) {
