@@ -79,7 +79,7 @@ ball.ondragstart = function() {
       getWeatherInfo(weatherUrl);//this function sends ajax request to weather API
 	getForecastInfo(latitude, longitude);
 			 var map;
-  var geoJSON;
+			 var geoJSON;
   var request;
   var gettingData = false;
   var openWeatherMapKey = "4b21fe0c4323ae251a754750e6cb5638"
@@ -242,13 +242,14 @@ google.maps.event.addListener(map, 'click', function(event){
     }).fail(function() {
       $('.border').append('<p>Error: Could not load weather data!</p>');
     });
+ 
  /***************************************************************************************************************/
 /*function getForecastInfo(url) {	
 	  
   }*/
 	/**************************************************************************************************************************************************/
   // code for ajax request to weather API
-  function getWeatherInfo(latitude, longitude) {
+  function getWeatherInfo(url) {
 
     $.ajax({
       url: url,
