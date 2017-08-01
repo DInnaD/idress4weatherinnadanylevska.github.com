@@ -258,7 +258,7 @@ google.maps.event.addListener(map, 'click', function(event){
 
 */
 // code for ajax request to weather API
-  function getWeatherInfo(weatherUrl) {
+  function getWeatherInfo(url) {
 
     $.ajax({
       url: url,
