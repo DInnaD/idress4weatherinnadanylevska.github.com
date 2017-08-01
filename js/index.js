@@ -77,8 +77,16 @@ ball.ondragstart = function() {
 			var longitude = location.lng;
 			var weatherUrl = 'https://api.apixu.com/v1/current.json?key=c696097710604a5c8a4154155170607&q=' + latitude + ',' + longitude;
       getWeatherInfo(weatherUrl);//this function sends ajax request to weather API
-	getForecastInfo(latitude, longitude);
-			 var map;
+	getForecastInfo(url, location.lat, location.lng);
+			
+		}
+    }).fail(function() {
+      $('.border').append('<p>Error: Could not load weather data!</p>');
+    });
+ 
+ /***************************************************************************************************************/
+function getForecastInfo(url,location.lat,location.lng) {	
+ var map;
 			 var geoJSON;
   var request;
   var gettingData = false;
@@ -237,19 +245,11 @@ google.maps.event.addListener(map, 'click', function(event){
   if(currentInfoWindow != null){
     currentInfoWindow.close();
   }
-}
-		}
-    }).fail(function() {
-      $('.border').append('<p>Error: Could not load weather data!</p>');
-    });
- 
- /***************************************************************************************************************/
-/*function getForecastInfo(url) {	
-	  
-  }*/
+}	  
+  }
 	/**************************************************************************************************************************************************/
   // code for ajax request to weather API
-  function getWeatherInfo(url) {
+  function getWeatherInfo(weatherUrl) {
 
     $.ajax({
       url: url,
