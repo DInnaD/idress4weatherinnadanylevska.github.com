@@ -1,5 +1,5 @@
 $(function() {
-	var ball = document.getElementById('ball');
+	/*var ball = document.getElementById('ball');
 
 ball.onmousedown = function(e) {
 
@@ -31,7 +31,7 @@ ball.onmousedown = function(e) {
 
 ball.ondragstart = function() {
   return false;
-};
+};*/
   // code for loader
   $(document).ajaxStart(function() {
     //show loader animation and hide border
