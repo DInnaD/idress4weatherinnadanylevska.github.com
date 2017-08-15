@@ -89,6 +89,13 @@ font-size: 1.8em;
 	height: auto;
 }
 @media \0screen {
+.intro .intro-body p .intro-text {
+   
+    margin-top: 30px;
+  }
+.marquee { 
+    height: 150;
+ }	
  img { 
   	width: auto; /* for ie 8 */
   }
@@ -198,13 +205,17 @@ a:focus {
 }
 .intro .intro-body .intro-text {
   font-size: 18px;
-margin-top: 30px;		  
+		  
 }
-marquee {
-height: 170px;
-	
-}
+
 @media (min-width: 768px) {
+.intro .intro-body p .intro-text {
+   
+    margin-top: 30px;
+  }
+.marquee { 
+    height: 150;
+ }	
   .intro {
     height: 100%;
     padding: 0;
